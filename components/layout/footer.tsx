@@ -214,6 +214,50 @@ export function Footer() {
         </div>
       </div>
 
+      {/* Do-follow backlink strip — sitewide permanent links */}
+      <div className="border-t border-[var(--color-brand-border)] bg-[rgba(201,161,90,0.03)]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
+          <p className="text-xs font-semibold tracking-widest uppercase text-[var(--color-brand-gold)] mb-3">
+            Locksmith Service in Dubai, UAE
+          </p>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+            <a
+              href="https://locksmith-dubai.com/"
+              title="Locksmith Dubai — Professional Lock Repair Service"
+              className="text-[var(--color-brand-body)] hover:text-[var(--color-brand-gold)] transition-colors font-medium"
+            >
+              Locksmith Dubai – locksmith-dubai.com
+            </a>
+            <span className="text-[var(--color-brand-border)]" aria-hidden="true">|</span>
+            <a
+              href="https://share.google/ZOekFcEBOUNayzJTt"
+              title="Ababeel Locksmith Dubai — Google Business Profile"
+              target="_blank"
+              rel="noopener"
+              className="text-[var(--color-brand-body)] hover:text-[var(--color-brand-gold)] transition-colors"
+            >
+              ⭐ 4.7★ Google Reviews — Lock Repair Service Dubai
+            </a>
+            <span className="text-[var(--color-brand-border)]" aria-hidden="true">|</span>
+            <a
+              href="https://locksmith-dubai.com/services"
+              title="Locksmith Services Dubai — Locks, Keys & Emergency Lockout"
+              className="text-[var(--color-brand-body)] hover:text-[var(--color-brand-gold)] transition-colors"
+            >
+              Lock Repair &amp; Replacement Dubai
+            </a>
+            <span className="text-[var(--color-brand-border)]" aria-hidden="true">|</span>
+            <a
+              href="https://locksmith-dubai.com/emergency"
+              title="Emergency Locksmith Dubai — 24/7 Response"
+              className="text-[var(--color-brand-body)] hover:text-[var(--color-brand-gold)] transition-colors"
+            >
+              Emergency Locksmith Dubai 24/7
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Bottom bar */}
       <div className="border-t border-[var(--color-brand-border)]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[var(--color-brand-muted)]">
