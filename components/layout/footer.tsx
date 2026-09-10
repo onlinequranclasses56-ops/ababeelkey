@@ -16,9 +16,16 @@ const companyLinks = [
   { href: "/about", label: "About Us" },
   { href: "/reviews", label: "Reviews" },
   { href: "/guides", label: "Guides" },
-  { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
+];
+
+const blogLinks = [
+  { href: "/blog/signs-you-need-emergency-locksmith-dubai", label: "10 Signs You Need an Emergency Locksmith" },
+  { href: "/blog/lock-security-checklist-dubai-landlords", label: "Lock Security Checklist for Dubai Landlords" },
+  { href: "/blog/lost-car-keys-dubai-what-to-do", label: "Lost Your Car Keys in Dubai?" },
+  { href: "/blog/repair-vs-replace-lock-dubai", label: "When to Repair vs. Replace a Lock" },
+  { href: "/blog/home-security-guide-dubai-expats", label: "Home Security Guide for Dubai Expats" },
 ];
 
 export function Footer() {
@@ -29,7 +36,7 @@ export function Footer() {
       <LocalBusinessSchema />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Column 1: Brand + NAP */}
           <div className="lg:col-span-1">
             <a href="/" className="inline-block mb-4">
@@ -146,7 +153,34 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Company + CTA */}
+          {/* Column 4: Blog */}
+          <div>
+            <h3 className="text-xs font-semibold tracking-widest uppercase text-[var(--color-brand-gold)] mb-4">
+              Latest Articles
+            </h3>
+            <ul className="space-y-2">
+              {blogLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="text-sm text-[var(--color-brand-muted)] hover:text-[var(--color-brand-white)] transition-colors leading-snug block"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a
+                  href="/blog"
+                  className="text-xs text-[var(--color-brand-gold)] hover:underline mt-1 inline-block"
+                >
+                  All articles →
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 5: Company + CTA */}
           <div>
             <h3 className="text-xs font-semibold tracking-widest uppercase text-[var(--color-brand-gold)] mb-4">
               Company
