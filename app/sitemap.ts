@@ -4,9 +4,18 @@ import { siteConfig } from "@/lib/config/site";
 const BASE = siteConfig.url;
 
 // Update this date whenever significant content is changed site-wide
-const SITE_UPDATED = new Date("2026-09-06");
+const SITE_UPDATED = new Date("2026-09-09");
 // Update this date whenever a service page is edited
-const SERVICE_UPDATED = new Date("2026-09-06");
+const SERVICE_UPDATED = new Date("2026-09-09");
+const BLOG_PUBLISHED = new Date("2026-09-09");
+
+const blogSlugs = [
+  "signs-you-need-emergency-locksmith-dubai",
+  "lock-security-checklist-dubai-landlords",
+  "lost-car-keys-dubai-what-to-do",
+  "repair-vs-replace-lock-dubai",
+  "home-security-guide-dubai-expats",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -22,6 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: `${BASE}/blog`,
+      lastModified: BLOG_PUBLISHED,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
   ];
 
   const serviceRoutes: MetadataRoute.Sitemap = siteConfig.services.map((service) => ({
@@ -31,5 +46,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...serviceRoutes];
+  const blogRoutes: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
+    url: `${BASE}/blog/${slug}`,
+    lastModified: BLOG_PUBLISHED,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...blogRoutes];
 }
