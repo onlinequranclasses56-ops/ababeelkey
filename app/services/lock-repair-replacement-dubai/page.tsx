@@ -11,7 +11,7 @@ import { AllServicesLinks } from "@/components/sections/all-services-links";
 export const metadata: Metadata = {
   title: "Lock Repair & Replacement Dubai – Residential & Commercial | Ababeel Key Trading",
   description:
-    "Lock repair and replacement in Dubai for homes, apartments, offices, and commercial premises. Upgrade to high-security locks or repair faulty locks. Call +971 50 476 2783.",
+    "Lock repair and replacement in Dubai for homes, apartments, offices, and commercial premises. Upgrade to high-security locks or repair faulty locks. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/lock-repair-replacement-dubai` },
 };
 
@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "How much does lock replacement cost in Dubai?",
     answer:
-      "Lock replacement in Dubai starts from approximately AED 80–150 for a standard deadbolt or door lock, including labour. High-security locks and premium brands cost more. Call +971 50 476 2783 for a quote specific to your lock type and door.",
+      "Lock replacement in Dubai starts from approximately AED 80–150 for a standard deadbolt or door lock, including labour. High-security locks and premium brands cost more. Call +971 52 642 6161 for a quote specific to your lock type and door.",
   },
   {
     question: "Can you match a new lock to my existing keys?",

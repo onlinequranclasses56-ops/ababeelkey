@@ -43,7 +43,7 @@ export const services: ServiceData[] = [
       "Safe lockout and emergency opening",
     ],
     processSteps: [
-      "Call +971 50 476 2783 — we answer 24 hours, including UAE public holidays.",
+      "Call +971 52 642 6161 — we answer 24 hours, including UAE public holidays.",
       "Tell us your location and what you are locked out of — we confirm availability and ETA.",
       "Receive a price estimate on the call before dispatch — no hidden charges on arrival.",
       "Our technician arrives, verifies your identity, and opens the lock non-destructively.",

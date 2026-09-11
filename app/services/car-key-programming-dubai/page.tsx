@@ -11,7 +11,7 @@ import { AllServicesLinks } from "@/components/sections/all-services-links";
 export const metadata: Metadata = {
   title: "Car Key Programming Dubai – Transponder & Smart Key | Ababeel Key Trading",
   description:
-    "Car key programming in Dubai for all makes and models. Transponder keys, smart keys, remote keys, and key fobs programmed on-site. Call +971 50 476 2783.",
+    "Car key programming in Dubai for all makes and models. Transponder keys, smart keys, remote keys, and key fobs programmed on-site. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/car-key-programming-dubai` },
 };
 
@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "How much does car key programming cost in Dubai?",
     answer:
-      "Car key programming in Dubai typically starts from AED 200–400 for a basic transponder key. Smart keys and proximity fobs cost more, from AED 400–1,000+, depending on the vehicle. Call +971 50 476 2783 with your car details for an accurate quote.",
+      "Car key programming in Dubai typically starts from AED 200–400 for a basic transponder key. Smart keys and proximity fobs cost more, from AED 400–1,000+, depending on the vehicle. Call +971 52 642 6161 with your car details for an accurate quote.",
   },
   {
     question: "How long does car key programming take?",

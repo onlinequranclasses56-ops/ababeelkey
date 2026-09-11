@@ -11,7 +11,7 @@ import { AllServicesLinks } from "@/components/sections/all-services-links";
 export const metadata: Metadata = {
   title: "Key Cutting Dubai – Precision Key Cutting Service | Ababeel Key Trading",
   description:
-    "Professional key cutting service in Dubai at Al Murar. Duplicate keys for home, office, car, and padlocks — cut while you wait. Call +971 50 476 2783.",
+    "Professional key cutting service in Dubai at Al Murar. Duplicate keys for home, office, car, and padlocks — cut while you wait. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/key-cutting-dubai` },
 };
 
@@ -19,7 +19,7 @@ const faqs = [
   {
     question: "How much does key cutting cost in Dubai?",
     answer:
-      "Key cutting in Dubai starts from approximately AED 15–30 for a standard house or padlock key. High-security keys, dimple keys, and transponder car keys cost more. Call us on +971 50 476 2783 for a specific quote for your key type.",
+      "Key cutting in Dubai starts from approximately AED 15–30 for a standard house or padlock key. High-security keys, dimple keys, and transponder car keys cost more. Call us on +971 52 642 6161 for a specific quote for your key type.",
   },
   {
     question: "Can you cut a key without the original?",

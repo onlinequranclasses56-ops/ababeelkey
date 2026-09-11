@@ -6,9 +6,8 @@ export const siteConfig = {
   url: "https://ababeelkeydxb.com",
 
   // NAP — byte-for-byte canonical source. Never hardcode anywhere else.
-  phone: process.env.NEXT_PUBLIC_PHONE_NUMBER ?? "+971 50 476 2783",
-  phoneRaw: process.env.NEXT_PUBLIC_PHONE_RAW ?? "971504762783",
-  whatsappUrl: `https://wa.me/${process.env.NEXT_PUBLIC_PHONE_RAW ?? "971504762783"}`,
+  phone: process.env.NEXT_PUBLIC_PHONE_NUMBER ?? "+971 52 642 6161",
+  phoneRaw: process.env.NEXT_PUBLIC_PHONE_RAW ?? "971526426161",
 
   address: {
     street: "Al Murar - Frij Murar",

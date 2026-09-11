@@ -12,7 +12,7 @@ import { AllServicesLinks } from "@/components/sections/all-services-links";
 export const metadata: Metadata = {
   title: "Emergency Locksmith Dubai – 24/7 Response | Ababeel Key Trading",
   description:
-    "Emergency locksmith service in Dubai available 24 hours. Locked out of home, office, or car? Ababeel Key Trading LLC responds fast across Dubai. Call +971 50 476 2783.",
+    "Emergency locksmith service in Dubai available 24 hours. Locked out of home, office, or car? Ababeel Key Trading LLC responds fast across Dubai. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/emergency-locksmith-dubai` },
 };
 
@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "Do you charge extra for emergency locksmith calls at night?",
     answer:
-      "We operate 24/7 at consistent pricing. Call us on +971 50 476 2783 and we will give you a quote before dispatching — no surprise fees on arrival.",
+      "We operate 24/7 at consistent pricing. Call us on +971 52 642 6161 and we will give you a quote before dispatching — no surprise fees on arrival.",
   },
   {
     question: "What identification do I need to prove I'm locked out of my own property?",
@@ -130,7 +130,7 @@ export default function EmergencyLocksmithPage() {
             </h2>
             <ol className="space-y-3 list-none pl-0">
               {[
-                "Call +971 50 476 2783 or send a WhatsApp message with your location.",
+                "Call +971 52 642 6161 with your location — we answer immediately, 24/7.",
                 "Tell us what you're locked out of (home, car, office) and where you are.",
                 "We confirm availability and give you a price estimate on the call.",
                 "Our technician is dispatched immediately — stay at your location.",

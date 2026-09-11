@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/config/site";
 export const metadata: Metadata = {
   title: "Ababeel Key Trading LLC – 24/7 Locksmith & Key Cutting Dubai",
   description:
-    "24-hour locksmith and key cutting service in Dubai, UAE. Emergency lockouts, car key programming, lock repair. Based in Al Murar, Deira. Call +971 50 476 2783 now.",
+    "24-hour locksmith and key cutting service in Dubai, UAE. Emergency lockouts, car key programming, lock repair. Based in Al Murar, Deira. Call +971 52 642 6161 now.",
   alternates: {
     canonical: siteConfig.url,
   },

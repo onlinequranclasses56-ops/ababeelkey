@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, MapPin, Clock, Star, Facebook } from "lucide-react";
+import { Phone, MapPin, Clock, Star, Facebook } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 
@@ -104,13 +104,11 @@ export function Footer() {
                 <Facebook className="h-4 w-4" />
               </a>
               <a
-                href={`${siteConfig.whatsappUrl}?text=Hi%2C%20I%20need%20a%20locksmith.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Chat on WhatsApp"
-                className="h-9 w-9 flex items-center justify-center rounded-lg border border-[var(--color-brand-border)] text-[var(--color-brand-muted)] hover:border-green-500 hover:text-green-400 transition-colors"
+                href={`tel:${siteConfig.phone}`}
+                aria-label={`Call ${siteConfig.phone}`}
+                className="h-9 w-9 flex items-center justify-center rounded-lg border border-[var(--color-brand-border)] text-[var(--color-brand-muted)] hover:border-[var(--color-brand-gold)] hover:text-[var(--color-brand-gold)] transition-colors"
               >
-                <MessageCircle className="h-4 w-4" />
+                <Phone className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -204,10 +202,13 @@ export function Footer() {
               </p>
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="flex items-center justify-center gap-2 h-10 w-full rounded-lg gradient-gold text-[#0A0A0B] font-bold text-sm"
+                className="flex items-center justify-center gap-2 h-12 w-full rounded-lg gradient-gold text-[#0A0A0B] font-bold text-sm shadow-[0_2px_12px_rgba(201,161,90,0.4)] hover:brightness-110 transition-all"
               >
                 <Phone className="h-4 w-4" aria-hidden="true" />
-                {siteConfig.phone}
+                <span>
+                  Call Now — 24/7
+                  <span className="block text-xs font-semibold opacity-80">{siteConfig.phone}</span>
+                </span>
               </a>
             </div>
           </div>

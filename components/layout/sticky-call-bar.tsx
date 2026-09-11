@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
 
 interface StickyCallBarProps {
@@ -17,15 +17,6 @@ export function StickyCallBar({ pageName = "sticky-bar" }: StickyCallBarProps) {
     }
   };
 
-  const handleWhatsAppClick = () => {
-    if (typeof window !== "undefined" && (window as any).gtag) {
-      (window as any).gtag("event", "whatsapp_click", {
-        event_category: "conversion",
-        event_label: pageName,
-      });
-    }
-  };
-
   return (
     <div
       className="fixed bottom-0 left-0 right-0 z-50 md:hidden"
@@ -34,26 +25,18 @@ export function StickyCallBar({ pageName = "sticky-bar" }: StickyCallBarProps) {
         paddingBottom: "env(safe-area-inset-bottom, 0px)",
       }}
     >
-      <div className="flex gap-3 p-3 pt-6">
+      <div className="p-3 pt-6">
         <a
           href={`tel:${siteConfig.phone}`}
           onClick={handleCallClick}
-          className="flex flex-1 items-center justify-center gap-2 h-14 rounded-xl gradient-gold text-[#0A0A0B] font-bold text-base shadow-[0_4px_20px_rgba(201,161,90,0.5)] active:scale-[0.98] transition-transform"
+          className="flex w-full items-center justify-center gap-3 h-16 rounded-xl gradient-gold text-[#0A0A0B] font-bold text-lg shadow-[0_4px_24px_rgba(201,161,90,0.6)] active:scale-[0.98] transition-transform"
           aria-label={`Call Ababeel Key Trading now: ${siteConfig.phone}`}
         >
-          <Phone className="h-5 w-5" aria-hidden="true" />
-          Call Now
-        </a>
-        <a
-          href={`${siteConfig.whatsappUrl}?text=Hi%2C%20I%20need%20a%20locksmith%20in%20Dubai.`}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={handleWhatsAppClick}
-          className="flex flex-1 items-center justify-center gap-2 h-14 rounded-xl bg-[#25D366] text-white font-bold text-base shadow-[0_4px_20px_rgba(37,211,102,0.4)] active:scale-[0.98] transition-transform"
-          aria-label="Chat on WhatsApp"
-        >
-          <MessageCircle className="h-5 w-5" aria-hidden="true" />
-          WhatsApp
+          <Phone className="h-6 w-6" aria-hidden="true" />
+          <span>
+            Call Now
+            <span className="block text-sm font-semibold opacity-80">{siteConfig.phone}</span>
+          </span>
         </a>
       </div>
     </div>

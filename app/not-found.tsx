@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/config/site";
 
 export const metadata: Metadata = {
   title: "Page Not Found – Ababeel Key Trading LLC",
-  description: "The page you're looking for doesn't exist. Return to the Ababeel Key Trading LLC homepage or call us on +971 50 476 2783.",
+  description: "The page you're looking for doesn't exist. Return to the Ababeel Key Trading LLC homepage or call us on +971 52 642 6161.",
   robots: { index: false, follow: true },
 };
 

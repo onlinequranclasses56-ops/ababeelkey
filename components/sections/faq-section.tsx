@@ -30,7 +30,7 @@ const homeFaqs = [
   {
     question: "What should I do if I'm locked out of my home or car in Dubai?",
     answer:
-      "Call Ababeel Key Trading LLC immediately on +971 50 476 2783 or send us a WhatsApp message. Stay in a safe, well-lit location while you wait. Don't attempt to force entry — this can damage the lock and increase repair costs. We'll arrive as quickly as possible and use non-destructive entry methods wherever possible.",
+      "Call Ababeel Key Trading LLC immediately on +971 52 642 6161. Stay in a safe, well-lit location while you wait. Don't attempt to force entry — this can damage the lock and increase repair costs. We'll arrive as quickly as possible and use non-destructive entry methods wherever possible.",
   },
 ];
 

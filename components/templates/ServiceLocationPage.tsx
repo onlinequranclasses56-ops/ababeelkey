@@ -1,4 +1,4 @@
-import { Phone, Clock, MapPin, CheckCircle, Star, Shield, ChevronRight } from "lucide-react";
+import { Phone, Clock, MapPin, CheckCircle, Star, Shield, ChevronRight, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
 import { getService, type ServiceData } from "@/data/services";
 import { getLocation, getNearbyLocations, type LocationData } from "@/data/locations";
@@ -101,28 +101,24 @@ export function ServiceLocationPage({ serviceSlug, locationSlug }: Props) {
               ))}
             </div>
 
-            {/* CTA buttons */}
+            {/* Primary CTA — call only */}
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="flex items-center justify-center gap-2 h-13 px-7 py-3.5 rounded-xl gradient-gold text-[#0A0A0B] font-bold text-base shadow-[0_4px_20px_rgba(201,161,90,0.4)] hover:brightness-110 transition-all"
+                className="inline-flex items-center justify-center gap-3 h-16 px-8 rounded-xl gradient-gold text-[#0A0A0B] font-bold text-lg shadow-[0_4px_28px_rgba(201,161,90,0.55)] hover:shadow-[0_8px_40px_rgba(201,161,90,0.7)] hover:brightness-110 transition-all active:scale-[0.98]"
+                aria-label={`Call for ${service.name} in ${location.name}: ${siteConfig.phone}`}
               >
-                <Phone className="h-5 w-5" aria-hidden="true" />
-                Call Now — {siteConfig.phone}
-              </a>
-              <a
-                href={`${siteConfig.whatsappUrl}?text=Hi%2C%20I%20need%20${encodeURIComponent(service.name)}%20in%20${encodeURIComponent(location.name)}%2C%20Dubai.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 h-13 px-7 py-3.5 rounded-xl border border-[var(--color-brand-gold)] text-[var(--color-brand-gold)] font-bold text-base hover:bg-[rgba(201,161,90,0.08)] transition-all"
-              >
-                WhatsApp Us
+                <Phone className="h-6 w-6 shrink-0" aria-hidden="true" />
+                <span>
+                  Call Now — 24/7
+                  <span className="block text-sm font-semibold opacity-80">{siteConfig.phone}</span>
+                </span>
               </a>
             </div>
           </div>
 
           {/* ── 2. LOCAL CONTEXT ─────────────────────────────────────────── */}
-          <div className="card-surface rounded-2xl p-6 mb-8 border-l-4 border-[var(--color-brand-gold)]">
+          <div className="card-surface rounded-2xl p-6 mb-6 border-l-4 border-[var(--color-brand-gold)]">
             <h2 className="text-lg font-bold text-[var(--color-brand-white)] mb-3">
               {service.name} in {location.name} — What to Expect
             </h2>
@@ -134,6 +130,21 @@ export function ServiceLocationPage({ serviceSlug, locationSlug }: Props) {
               and throughout {location.name}. Our technician is typically at your door in{" "}
               <strong className="text-[var(--color-brand-white)]">{location.travelTimeFromBase}</strong> from our Al Murar base.
             </p>
+          </div>
+
+          {/* ── 2b. AEO QUICK-FACTS PANEL ────────────────────────────────── */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+            {[
+              { label: "Response Time", value: location.travelTimeFromBase },
+              { label: "Price Range", value: `AED ${service.priceRangeAED.min}–${service.priceRangeAED.max}` },
+              { label: "Availability", value: "24/7 · 365 Days" },
+              { label: "Service Area", value: location.zone },
+            ].map(({ label, value }) => (
+              <div key={label} className="card-surface rounded-xl p-4 text-center border border-[var(--color-brand-border)]">
+                <p className="text-xs text-[var(--color-brand-muted)] mb-1">{label}</p>
+                <p className="text-sm font-bold text-[var(--color-brand-gold)]">{value}</p>
+              </div>
+            ))}
           </div>
 
           {/* ── 3. WHAT'S INCLUDED ───────────────────────────────────────── */}
@@ -239,9 +250,17 @@ export function ServiceLocationPage({ serviceSlug, locationSlug }: Props) {
 
           {/* ── 7. NEARBY LOCATIONS ──────────────────────────────────────── */}
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-[var(--color-brand-white)] mb-4">
-              {service.name} Near {location.name}
-            </h2>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-bold text-[var(--color-brand-white)]">
+                {service.name} Near {location.name}
+              </h2>
+              <a
+                href={`/services/${serviceSlug}`}
+                className="text-xs text-[var(--color-brand-gold)] hover:underline flex items-center gap-1"
+              >
+                All areas <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+              </a>
+            </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
               {nearby.map((loc) => (
                 <a
@@ -255,11 +274,19 @@ export function ServiceLocationPage({ serviceSlug, locationSlug }: Props) {
             </div>
           </div>
 
-          {/* ── 8. RELATED SERVICES IN THIS LOCATION ─────────────────────── */}
+          {/* ── 8. RELATED SERVICES + HUB LINKS ──────────────────────────── */}
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-[var(--color-brand-white)] mb-4">
-              Other Locksmith Services in {location.name}
-            </h2>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-bold text-[var(--color-brand-white)]">
+                Other Locksmith Services in {location.name}
+              </h2>
+              <a
+                href={`/locations/${locationSlug}`}
+                className="text-xs text-[var(--color-brand-gold)] hover:underline flex items-center gap-1"
+              >
+                All services <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+              </a>
+            </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
               {service.relatedServices.map((slug) => {
                 const rel = getService(slug);
@@ -274,11 +301,35 @@ export function ServiceLocationPage({ serviceSlug, locationSlug }: Props) {
                   </a>
                 );
               })}
+            </div>
+
+            {/* Hub navigation breadcrumb links */}
+            <div className="mt-4 flex flex-wrap gap-2">
+              <a
+                href={`/services/${serviceSlug}`}
+                className="inline-flex items-center gap-1.5 text-xs px-4 py-2 rounded-full border border-[var(--color-brand-gold)]/50 text-[var(--color-brand-gold)] hover:bg-[rgba(201,161,90,0.08)] transition-colors"
+              >
+                <ArrowRight className="h-3 w-3" aria-hidden="true" />
+                {service.name} — All Dubai Areas
+              </a>
               <a
                 href={`/locations/${locationSlug}`}
-                className="text-sm px-4 py-3 rounded-xl border border-[var(--color-brand-border)] text-[var(--color-brand-gold)] hover:border-[var(--color-brand-gold)]/70 transition-colors text-center font-medium"
+                className="inline-flex items-center gap-1.5 text-xs px-4 py-2 rounded-full border border-[var(--color-brand-gold)]/50 text-[var(--color-brand-gold)] hover:bg-[rgba(201,161,90,0.08)] transition-colors"
               >
-                All Services in {location.name} →
+                <MapPin className="h-3 w-3" aria-hidden="true" />
+                All Services in {location.name}
+              </a>
+              <a
+                href="/services"
+                className="inline-flex items-center gap-1.5 text-xs px-4 py-2 rounded-full border border-[var(--color-brand-border)] text-[var(--color-brand-muted)] hover:border-[var(--color-brand-gold)]/50 hover:text-[var(--color-brand-gold)] transition-colors"
+              >
+                All Locksmith Services →
+              </a>
+              <a
+                href="/locations"
+                className="inline-flex items-center gap-1.5 text-xs px-4 py-2 rounded-full border border-[var(--color-brand-border)] text-[var(--color-brand-muted)] hover:border-[var(--color-brand-gold)]/50 hover:text-[var(--color-brand-gold)] transition-colors"
+              >
+                All Dubai Locations →
               </a>
             </div>
           </div>

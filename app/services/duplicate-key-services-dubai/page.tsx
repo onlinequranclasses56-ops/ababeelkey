@@ -11,7 +11,7 @@ import { AllServicesLinks } from "@/components/sections/all-services-links";
 export const metadata: Metadata = {
   title: "Duplicate Key Services Dubai – Copy Keys for Home, Car & Office | Ababeel Key Trading",
   description:
-    "Duplicate key cutting in Dubai for home, car, office, padlock, and cabinet keys. Fast, precise copies while you wait at Al Murar. Call +971 50 476 2783.",
+    "Duplicate key cutting in Dubai for home, car, office, padlock, and cabinet keys. Fast, precise copies while you wait at Al Murar. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/duplicate-key-services-dubai` },
 };
 
@@ -19,7 +19,7 @@ const faqs = [
   {
     question: "How much does it cost to get a duplicate key made in Dubai?",
     answer:
-      "Duplicate key prices in Dubai start from approximately AED 15–30 for a standard house or padlock key. Office and high-security keys cost more. Car key duplication (blade only, no chip programming) starts from AED 30–80. Call +971 50 476 2783 for a specific quote.",
+      "Duplicate key prices in Dubai start from approximately AED 15–30 for a standard house or padlock key. Office and high-security keys cost more. Car key duplication (blade only, no chip programming) starts from AED 30–80. Call +971 52 642 6161 for a specific quote.",
   },
   {
     question: "How many duplicate keys can I make from one original?",

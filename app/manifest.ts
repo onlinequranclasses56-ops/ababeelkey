@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Ababeel Key Trading LLC – Dubai Locksmith",
     short_name: "Ababeel Keys",
     description:
-      "24-hour locksmith and key cutting service in Dubai. Emergency lockouts, car key programming, lock repair. Call +971 50 476 2783.",
+      "24-hour locksmith and key cutting service in Dubai. Emergency lockouts, car key programming, lock repair. Call +971 52 642 6161.",
     start_url: "/",
     display: "standalone",
     background_color: "#0A0A0B",

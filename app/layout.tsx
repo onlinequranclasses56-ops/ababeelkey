@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Ababeel Key Trading LLC – Dubai Locksmith",
   },
   description:
-    "24-hour locksmith and key cutting service in Dubai. Emergency lockouts, car key programming, lock repair. Based in Al Murar, serving all Dubai. Call +971 50 476 2783.",
+    "24-hour locksmith and key cutting service in Dubai. Emergency lockouts, car key programming, lock repair. Based in Al Murar, serving all Dubai. Call +971 52 642 6161.",
   keywords: [
     "locksmith dubai",
     "key cutting dubai",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ababeel Key Trading LLC – 24/7 Locksmith Dubai",
     description:
-      "Emergency locksmith & key cutting in Dubai. Open 24/7. Call +971 50 476 2783.",
+      "Emergency locksmith & key cutting in Dubai. Open 24/7. Call +971 52 642 6161.",
     images: ["/images/og-home.jpg"],
   },
   robots: {

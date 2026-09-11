@@ -11,7 +11,7 @@ import { AllServicesLinks } from "@/components/sections/all-services-links";
 export const metadata: Metadata = {
   title: "Home Lockout Service Dubai – Locked Out? Fast Entry 24/7 | Ababeel Key Trading",
   description:
-    "Locked out of your home in Dubai? Ababeel Key Trading LLC provides 24/7 home lockout service — fast, damage-free entry for apartments, villas, and studios. Call +971 50 476 2783.",
+    "Locked out of your home in Dubai? Ababeel Key Trading LLC provides 24/7 home lockout service — fast, damage-free entry for apartments, villas, and studios. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/home-lockout-service-dubai` },
 };
 
@@ -19,7 +19,7 @@ const faqs = [
   {
     question: "What should I do if I'm locked out of my home in Dubai?",
     answer:
-      "Call Ababeel Key Trading LLC on +971 50 476 2783. Stay at your location, keep your UAE ID or tenancy contract ready to verify you're the resident, and we'll dispatch a technician to you. Do not try to force the door — this risks damaging the lock and your door frame.",
+      "Call Ababeel Key Trading LLC on +971 52 642 6161. Stay at your location, keep your UAE ID or tenancy contract ready to verify you're the resident, and we'll dispatch a technician to you. Do not try to force the door — this risks damaging the lock and your door frame.",
   },
   {
     question: "How quickly can you get to me if I'm locked out at home in Dubai?",
@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "Is home lockout service available at night and on weekends in Dubai?",
     answer:
-      "Yes — we operate 24 hours a day, 7 days a week, including weekends and UAE public holidays. The same number (+971 50 476 2783) works at all hours.",
+      "Yes — we operate 24 hours a day, 7 days a week, including weekends and UAE public holidays. The same number (+971 52 642 6161) works at all hours.",
   },
 ];
 
@@ -132,7 +132,7 @@ export default function HomeLockoutServicePage() {
             </h2>
             <ol className="space-y-3 list-none pl-0">
               {[
-                "Call +971 50 476 2783 — we answer 24 hours a day.",
+                "Call +971 52 642 6161 — we answer 24 hours a day.",
                 "Tell us your address and the type of lock on your door.",
                 "We give you a price estimate and confirm our ETA.",
                 "Our technician arrives and verifies your identity.",

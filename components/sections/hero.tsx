@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, Star, MapPin } from "lucide-react";
+import { Phone, Star, MapPin } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
 import { CallClickLink } from "@/components/layout/call-click-link";
 
@@ -57,35 +57,22 @@ export function Hero() {
             serves all of Dubai — emergency response, day or night, 365 days a year.
           </p>
 
-          {/* Dual CTA — above the fold, no scrolling required */}
+          {/* Primary CTA — above the fold, call-only */}
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
             <CallClickLink
               href={`tel:${siteConfig.phone}`}
               pageName="hero"
               eventType="call_click"
-              className="flex items-center justify-center gap-3 h-16 px-8 rounded-xl gradient-gold text-[#0A0A0B] font-bold text-base sm:text-lg shadow-[0_4px_24px_rgba(201,161,90,0.5)] hover:shadow-[0_8px_32px_rgba(201,161,90,0.65)] hover:brightness-110 transition-all active:scale-[0.98]"
+              className="flex items-center justify-center gap-3 h-16 px-10 rounded-xl gradient-gold text-[#0A0A0B] font-bold text-base sm:text-xl shadow-[0_4px_32px_rgba(201,161,90,0.6)] hover:shadow-[0_8px_40px_rgba(201,161,90,0.75)] hover:brightness-110 transition-all active:scale-[0.98]"
               aria-label={`Call Ababeel Key Trading: ${siteConfig.phone}`}
             >
-              <Phone className="h-5 w-5 shrink-0" aria-hidden="true" />
+              <Phone className="h-6 w-6 shrink-0" aria-hidden="true" />
               <span>
-                Call Now
-                <span className="block text-xs font-normal opacity-80">
+                Call Now — 24/7
+                <span className="block text-sm font-semibold opacity-80">
                   {siteConfig.phone}
                 </span>
               </span>
-            </CallClickLink>
-
-            <CallClickLink
-              href={`${siteConfig.whatsappUrl}?text=Hi%2C%20I%20need%20an%20emergency%20locksmith%20in%20Dubai.`}
-              pageName="hero"
-              eventType="whatsapp_click"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 h-16 px-8 rounded-xl bg-[#25D366] text-white font-bold text-base sm:text-lg shadow-[0_4px_20px_rgba(37,211,102,0.35)] hover:bg-[#22bf5b] hover:shadow-[0_8px_28px_rgba(37,211,102,0.5)] transition-all active:scale-[0.98]"
-              aria-label="WhatsApp Ababeel Key Trading"
-            >
-              <MessageCircle className="h-5 w-5 shrink-0" aria-hidden="true" />
-              WhatsApp Us
             </CallClickLink>
           </div>
 

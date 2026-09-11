@@ -11,7 +11,7 @@ import { AllServicesLinks } from "@/components/sections/all-services-links";
 export const metadata: Metadata = {
   title: "Safe Opening Dubai – Safe Locksmith & Combination Reset | Ababeel Key Trading",
   description:
-    "Professional safe opening service in Dubai. Locked out of your safe? Forgotten the combination? We open safes without damage wherever possible. Call +971 50 476 2783.",
+    "Professional safe opening service in Dubai. Locked out of your safe? Forgotten the combination? We open safes without damage wherever possible. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/safe-opening-safe-locksmith-dubai` },
 };
 
@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "How much does safe opening cost in Dubai?",
     answer:
-      "Safe opening prices in Dubai depend on the safe type, lock mechanism, and method required. Prices typically start from AED 200–400 for standard electronic or combination safes. Larger, high-security safes cost more. Call +971 50 476 2783 for a quote based on your specific safe.",
+      "Safe opening prices in Dubai depend on the safe type, lock mechanism, and method required. Prices typically start from AED 200–400 for standard electronic or combination safes. Larger, high-security safes cost more. Call +971 52 642 6161 for a quote based on your specific safe.",
   },
   {
     question: "Will you damage my safe when opening it?",

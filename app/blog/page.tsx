@@ -126,7 +126,7 @@ export default function BlogIndexPage() {
 
       <CtaBand
         heading="Need a locksmith in Dubai right now?"
-        subheading="Ababeel Key Trading LLC is open 24 hours. Call or WhatsApp for immediate assistance across all Dubai areas."
+        subheading="Ababeel Key Trading LLC is open 24 hours. Call +971 52 642 6161 for immediate assistance across all Dubai areas."
         pageName="blog-index"
         variant="trust"
       />

@@ -191,7 +191,7 @@ export default async function LocationHubPage({
 
       <CtaBand
         heading={`Need a locksmith in ${location.name} right now?`}
-        subheading={`We reach ${location.name} in ${location.travelTimeFromBase}. Call or WhatsApp for a free quote — 24 hours, 7 days.`}
+        subheading={`We reach ${location.name} in ${location.travelTimeFromBase}. Call ${siteConfig.phone} for a free quote — 24 hours, 7 days.`}
         pageName={`location-hub-${locationSlug}`}
         variant="urgency"
       />

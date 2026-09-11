@@ -1,4 +1,4 @@
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
 import { CallClickLink } from "@/components/layout/call-click-link";
 
@@ -55,28 +55,19 @@ export function CtaBand({
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+        <div className="shrink-0">
           <CallClickLink
             href={`tel:${siteConfig.phone}`}
             pageName={pageName}
             eventType="call_click"
-            className="flex items-center justify-center gap-2 h-14 px-7 rounded-xl gradient-gold text-[#0A0A0B] font-bold text-base shadow-[0_4px_20px_rgba(201,161,90,0.4)] hover:brightness-110 transition-all active:scale-[0.98] whitespace-nowrap"
+            className="flex items-center justify-center gap-3 h-16 px-8 rounded-xl gradient-gold text-[#0A0A0B] font-bold text-lg shadow-[0_4px_24px_rgba(201,161,90,0.5)] hover:brightness-110 transition-all active:scale-[0.98] whitespace-nowrap"
             aria-label={`Call now: ${siteConfig.phone}`}
           >
-            <Phone className="h-5 w-5 shrink-0" aria-hidden="true" />
-            Call Now
-          </CallClickLink>
-          <CallClickLink
-            href={`${siteConfig.whatsappUrl}?text=Hi%2C%20I%20need%20a%20locksmith%20in%20Dubai.`}
-            pageName={pageName}
-            eventType="whatsapp_click"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 h-14 px-7 rounded-xl border border-[var(--color-brand-gold)] text-[var(--color-brand-gold)] font-bold text-base hover:bg-[rgba(201,161,90,0.08)] transition-all active:scale-[0.98] whitespace-nowrap"
-            aria-label="WhatsApp us"
-          >
-            <MessageCircle className="h-5 w-5 shrink-0" aria-hidden="true" />
-            WhatsApp
+            <Phone className="h-6 w-6 shrink-0" aria-hidden="true" />
+            <span>
+              Call Now — 24/7
+              <span className="block text-sm font-semibold opacity-80">{siteConfig.phone}</span>
+            </span>
           </CallClickLink>
         </div>
       </div>

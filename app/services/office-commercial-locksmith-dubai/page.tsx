@@ -11,7 +11,7 @@ import { AllServicesLinks } from "@/components/sections/all-services-links";
 export const metadata: Metadata = {
   title: "Office & Commercial Locksmith Dubai – Master Keys & Access Control | Ababeel Key Trading",
   description:
-    "Commercial locksmith services in Dubai for offices, retail, warehouses, and businesses. Master key systems, access control, lock replacement, and emergency lockouts. Call +971 50 476 2783.",
+    "Commercial locksmith services in Dubai for offices, retail, warehouses, and businesses. Master key systems, access control, lock replacement, and emergency lockouts. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/office-commercial-locksmith-dubai` },
 };
 
@@ -24,12 +24,12 @@ const faqs = [
   {
     question: "What do we do if an employee loses their office key?",
     answer:
-      "Call us on +971 50 476 2783. We can cut a duplicate replacement key, or rekey the affected lock if security is a concern. For master key systems, we can issue a replacement key that maintains the system's integrity.",
+      "Call us on +971 52 642 6161. We can cut a duplicate replacement key, or rekey the affected lock if security is a concern. For master key systems, we can issue a replacement key that maintains the system's integrity.",
   },
   {
     question: "Do you provide emergency commercial locksmith services outside business hours?",
     answer:
-      "Yes — we operate 24/7 including evenings, weekends, and UAE public holidays. Business lockouts are treated as emergencies regardless of the time. Call +971 50 476 2783.",
+      "Yes — we operate 24/7 including evenings, weekends, and UAE public holidays. Business lockouts are treated as emergencies regardless of the time. Call +971 52 642 6161.",
   },
   {
     question: "Can you upgrade all the locks in our office at once?",
