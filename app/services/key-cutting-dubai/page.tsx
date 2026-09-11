@@ -9,7 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { AllServicesLinks } from "@/components/sections/all-services-links";
 
 export const metadata: Metadata = {
-  title: "Key Cutting Dubai – Precision Key Cutting Service | Ababeel Key Trading",
+  title: "Key Cutting Dubai – Precision Key Cutting Service",
   description:
     "Professional key cutting service in Dubai at Al Murar. Duplicate keys for home, office, car, and padlocks — cut while you wait. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/key-cutting-dubai` },

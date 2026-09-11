@@ -9,7 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { AllServicesLinks } from "@/components/sections/all-services-links";
 
 export const metadata: Metadata = {
-  title: "Safe Opening Dubai – Safe Locksmith & Combination Reset | Ababeel Key Trading",
+  title: "Safe Opening Dubai – Safe Locksmith & Combination Reset",
   description:
     "Professional safe opening service in Dubai. Locked out of your safe? Forgotten the combination? We open safes without damage wherever possible. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/safe-opening-safe-locksmith-dubai` },

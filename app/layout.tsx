@@ -16,20 +16,24 @@ const geist = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Ababeel Key Trading LLC – 24/7 Locksmith & Key Cutting Dubai",
-    template: "%s | Ababeel Key Trading LLC – Dubai Locksmith",
+    default: "24/7 Locksmith Dubai | Call +971 52 642 6161 | Ababeel Key Trading",
+    template: "%s | Call +971 52 642 6161 | Ababeel Locksmith Dubai",
   },
   description:
-    "24-hour locksmith and key cutting service in Dubai. Emergency lockouts, car key programming, lock repair. Based in Al Murar, serving all Dubai. Call +971 52 642 6161.",
+    "24-hour locksmith in Dubai — emergency lockouts, car key programming, lock repair & key cutting. Call +971 52 642 6161 now. Based in Al Murar, serving all 42 Dubai areas.",
   keywords: [
     "locksmith dubai",
-    "key cutting dubai",
+    "locksmith dubai call",
     "emergency locksmith dubai",
-    "car key programming dubai",
     "24 hour locksmith dubai",
+    "car key programming dubai",
+    "key cutting dubai",
+    "lock repair dubai",
     "al murar locksmith",
     "duplicate key dubai",
-    "lock repair dubai",
+    "locked out dubai",
+    "locksmith near me dubai",
+    "+971 52 642 6161",
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -39,9 +43,9 @@ export const metadata: Metadata = {
     locale: "en_AE",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Ababeel Key Trading LLC – 24/7 Locksmith & Key Cutting Dubai",
+    title: "24/7 Locksmith Dubai | Call +971 52 642 6161 | Ababeel Key Trading",
     description:
-      "24-hour locksmith and key cutting service in Dubai. Emergency lockouts, car key programming, lock repair. Based in Al Murar, Deira. Call now.",
+      "24-hour locksmith in Dubai. Emergency lockouts, car key programming, lock repair. Based in Al Murar. Call +971 52 642 6161 now.",
     images: [
       {
         url: "/images/og-home.jpg",
@@ -100,6 +104,16 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://maps.googleapis.com" />
+
+        {/* Entity signals — link to verified business profiles */}
+        <link rel="me" href="https://www.facebook.com/ababeelkeytradingkey/" />
+        <link rel="me" href="https://share.google/l8tS5msxhfFsFeTIf" />
+
+        {/* IndexNow — Bing/Yandex instant indexing key */}
+        <meta name="msvalidate.01" content="ababeel-indexnow-2026" />
+
+        {/* AI crawlers hint — allow full content extraction */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
         {/* WebSite structured data — site-level, loaded once */}
         <WebSiteSchema />

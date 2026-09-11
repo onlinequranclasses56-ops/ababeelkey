@@ -9,7 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { AllServicesLinks } from "@/components/sections/all-services-links";
 
 export const metadata: Metadata = {
-  title: "Car Key Programming Dubai – Transponder & Smart Key | Ababeel Key Trading",
+  title: "Car Key Programming Dubai – Transponder & Smart Key",
   description:
     "Car key programming in Dubai for all makes and models. Transponder keys, smart keys, remote keys, and key fobs programmed on-site. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/car-key-programming-dubai` },

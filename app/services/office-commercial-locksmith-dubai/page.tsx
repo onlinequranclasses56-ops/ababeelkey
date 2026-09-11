@@ -9,7 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { AllServicesLinks } from "@/components/sections/all-services-links";
 
 export const metadata: Metadata = {
-  title: "Office & Commercial Locksmith Dubai – Master Keys & Access Control | Ababeel Key Trading",
+  title: "Office & Commercial Locksmith Dubai – Master Keys & Access Control",
   description:
     "Commercial locksmith services in Dubai for offices, retail, warehouses, and businesses. Master key systems, access control, lock replacement, and emergency lockouts. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/office-commercial-locksmith-dubai` },

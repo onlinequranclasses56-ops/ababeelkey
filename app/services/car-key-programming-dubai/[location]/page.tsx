@@ -20,7 +20,7 @@ export async function generateMetadata({
   const location = getLocation(locationSlug);
   if (!service || !location) return {};
   return {
-    title: `${service.name} in ${location.name}, Dubai | Ababeel Key Trading`,
+    title: `${service.name} in ${location.name}, Dubai | Call ${siteConfig.phone}`,
     description: `Professional ${service.name.toLowerCase()} in ${location.name}. ${service.shortDescription} Available 24/7. Call ${siteConfig.phone}.`,
     alternates: {
       canonical: `${siteConfig.url}/services/${SERVICE_SLUG}/${locationSlug}`,

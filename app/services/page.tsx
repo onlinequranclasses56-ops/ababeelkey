@@ -7,9 +7,9 @@ import { CtaBand } from "@/components/sections/cta-band";
 import { BreadcrumbSchema, BreadcrumbNav } from "@/components/seo/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "Locksmith Services Dubai – Key Cutting, Emergency & Car Key Programming",
+  title: "Locksmith Services Dubai — 20 Services | Call +971 52 642 6161",
   description:
-    "Full-service locksmith in Dubai: emergency lockouts, key cutting, car key programming, lock repair, safe opening & more. Available 24/7 in Al Murar and across Dubai.",
+    "All Dubai locksmith services: emergency lockouts, key cutting, car key programming, lock repair, safe opening, smart locks & more. Call +971 52 642 6161 — available 24/7.",
   alternates: { canonical: `${siteConfig.url}/services` },
 };
 

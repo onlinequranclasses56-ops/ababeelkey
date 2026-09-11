@@ -9,7 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { AllServicesLinks } from "@/components/sections/all-services-links";
 
 export const metadata: Metadata = {
-  title: "Home Lockout Service Dubai – Locked Out? Fast Entry 24/7 | Ababeel Key Trading",
+  title: "Home Lockout Service Dubai – Locked Out? Fast Entry 24/7",
   description:
     "Locked out of your home in Dubai? Ababeel Key Trading LLC provides 24/7 home lockout service — fast, damage-free entry for apartments, villas, and studios. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/home-lockout-service-dubai` },

@@ -48,7 +48,39 @@ export function LocalBusinessSchema() {
     sameAs: [
       siteConfig.social.facebook,
       siteConfig.social.googleMapsShort,
+      siteConfig.plusCodeUrl,
     ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: siteConfig.phone,
+      contactType: "customer service",
+      areaServed: "AE",
+      availableLanguage: ["English", "Arabic"],
+      contactOption: "TollFree",
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        opens: "00:00",
+        closes: "23:59",
+      },
+    },
+    potentialAction: {
+      "@type": "ReserveAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `tel:${siteConfig.phoneRaw}`,
+        actionPlatform: [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform",
+          "http://schema.org/IOSPlatform",
+          "http://schema.org/AndroidPlatform",
+        ],
+      },
+      result: {
+        "@type": "Reservation",
+        name: "Locksmith Service Booking",
+      },
+    },
     areaServed: siteConfig.areasServed.map((area) => ({
       "@type": "City",
       name: area,
@@ -57,6 +89,18 @@ export function LocalBusinessSchema() {
     currenciesAccepted: "AED",
     paymentAccepted: "Cash, Credit Card",
     image: `${siteConfig.url}/images/ababeel-key-trading-dubai.jpg`,
+    knowsAbout: [
+      "Emergency Locksmith Services",
+      "Key Cutting",
+      "Car Key Programming",
+      "Lock Repair and Replacement",
+      "Home Lockout Service",
+      "Commercial Locksmith",
+      "Safe Opening",
+      "Smart Lock Installation",
+      "Master Key Systems",
+      "Biometric Access Control",
+    ],
   };
 
   return (

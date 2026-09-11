@@ -19,8 +19,8 @@ export async function generateMetadata({
   const location = getLocation(locationSlug);
   if (!location) return {};
   return {
-    title: `Locksmith in ${location.name}, Dubai — All Services | Ababeel Key Trading`,
-    description: `Professional locksmith services in ${location.name}, Dubai. Emergency lockouts, car key programming, lock repair, and more. Available 24/7. Call ${siteConfig.phone}.`,
+    title: `Locksmith in ${location.name} Dubai | Call ${siteConfig.phone}`,
+    description: `Professional locksmith in ${location.name}, Dubai. Emergency lockouts, car key programming, lock repair & more — 24/7. Call ${siteConfig.phone}. ${location.travelTimeFromBase} response time.`,
     alternates: { canonical: `${siteConfig.url}/locations/${locationSlug}` },
     openGraph: {
       title: `Locksmith in ${location.name}, Dubai`,

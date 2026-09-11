@@ -11,8 +11,8 @@ export function generateMetadata(): Metadata {
   const service = getService(SERVICE_SLUG);
   if (!service) return {};
   return {
-    title: `${service.name} Dubai — All Areas | Ababeel Key Trading`,
-    description: `Professional ${service.name.toLowerCase()} across all Dubai areas. ${service.shortDescription} Available 24/7 with price quoted before dispatch.`,
+    title: `${service.name} Dubai — All Areas | Call ${siteConfig.phone}`,
+    description: `Professional ${service.name.toLowerCase()} across all Dubai areas. ${service.shortDescription} Available 24/7. Call ${siteConfig.phone} for a free quote.`,
     alternates: { canonical: `${siteConfig.url}/services/${SERVICE_SLUG}` },
   };
 }

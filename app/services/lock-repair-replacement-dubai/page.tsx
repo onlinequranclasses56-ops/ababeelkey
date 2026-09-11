@@ -9,7 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { AllServicesLinks } from "@/components/sections/all-services-links";
 
 export const metadata: Metadata = {
-  title: "Lock Repair & Replacement Dubai – Residential & Commercial | Ababeel Key Trading",
+  title: "Lock Repair & Replacement Dubai – Residential & Commercial",
   description:
     "Lock repair and replacement in Dubai for homes, apartments, offices, and commercial premises. Upgrade to high-security locks or repair faulty locks. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/lock-repair-replacement-dubai` },

@@ -10,7 +10,7 @@ import { CallClickLink } from "@/components/layout/call-click-link";
 import { AllServicesLinks } from "@/components/sections/all-services-links";
 
 export const metadata: Metadata = {
-  title: "Emergency Locksmith Dubai – 24/7 Response | Ababeel Key Trading",
+  title: "Emergency Locksmith Dubai – 24/7 Response",
   description:
     "Emergency locksmith service in Dubai available 24 hours. Locked out of home, office, or car? Ababeel Key Trading LLC responds fast across Dubai. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/emergency-locksmith-dubai` },

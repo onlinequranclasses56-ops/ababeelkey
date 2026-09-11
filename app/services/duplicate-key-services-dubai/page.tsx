@@ -9,7 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { AllServicesLinks } from "@/components/sections/all-services-links";
 
 export const metadata: Metadata = {
-  title: "Duplicate Key Services Dubai – Copy Keys for Home, Car & Office | Ababeel Key Trading",
+  title: "Duplicate Key Services Dubai – Copy Keys for Home, Car & Office",
   description:
     "Duplicate key cutting in Dubai for home, car, office, padlock, and cabinet keys. Fast, precise copies while you wait at Al Murar. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/services/duplicate-key-services-dubai` },
