@@ -35,7 +35,7 @@ export function StickyCallBar({ pageName = "sticky-bar" }: StickyCallBarProps) {
           <Phone className="h-6 w-6" aria-hidden="true" />
           <span>
             Call Now
-            <span className="block text-sm font-semibold opacity-80">{siteConfig.phone}</span>
+            <span className="block text-sm font-bold">{siteConfig.phone}</span>
           </span>
         </a>
       </div>

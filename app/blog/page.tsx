@@ -4,7 +4,7 @@ import { BreadcrumbSchema, BreadcrumbNav } from "@/components/seo/breadcrumb-sch
 import { CtaBand } from "@/components/sections/cta-band";
 
 export const metadata: Metadata = {
-  title: "Locksmith Tips & Security Guides | Ababeel Key Trading",
+  title: "Dubai Locksmith Tips & Security Guides",
   description:
     "Expert locksmith advice for Dubai residents. Tips on lock security, emergency lockouts, car key replacement, and home security from Ababeel Key Trading LLC.",
   alternates: { canonical: `${siteConfig.url}/blog` },

@@ -6,7 +6,7 @@ import { BreadcrumbSchema, BreadcrumbNav } from "@/components/seo/breadcrumb-sch
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 
 export const metadata: Metadata = {
-  title: "About Ababeel Key Trading LLC | Dubai Locksmith Since Day One",
+  title: "About Ababeel Key Trading — Dubai's 24/7 Locksmith",
   description:
     "Ababeel Key Trading LLC is a licensed 24-hour locksmith and key cutting service based in Al Murar, Deira, Dubai. Transparent pricing, fast response, and professional technicians across all Dubai areas. Call +971 52 642 6161.",
   alternates: { canonical: `${siteConfig.url}/about` },

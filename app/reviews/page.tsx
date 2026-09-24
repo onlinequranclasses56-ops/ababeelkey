@@ -6,7 +6,7 @@ import { BreadcrumbSchema, BreadcrumbNav } from "@/components/seo/breadcrumb-sch
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 
 export const metadata: Metadata = {
-  title: "Reviews — Ababeel Key Trading LLC Dubai Locksmith",
+  title: "Customer Reviews — Dubai Locksmith",
   description:
     `${siteConfig.rating.value}★ on Google — read customer reviews for Ababeel Key Trading LLC, Dubai's 24-hour locksmith and key cutting service. Call +971 52 642 6161.`,
   alternates: { canonical: `${siteConfig.url}/reviews` },

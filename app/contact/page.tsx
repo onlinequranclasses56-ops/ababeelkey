@@ -5,7 +5,7 @@ import { BreadcrumbSchema, BreadcrumbNav } from "@/components/seo/breadcrumb-sch
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 
 export const metadata: Metadata = {
-  title: "Contact Ababeel Key Trading Dubai | Call +971 52 642 6161",
+  title: "Contact Ababeel Key Trading — Dubai Locksmith",
   description:
     "Contact Ababeel Key Trading LLC for locksmith services in Dubai. Call +971 52 642 6161 — available 24 hours, 7 days. Based in Al Murar, Deira. Free quote before any work.",
   alternates: { canonical: `${siteConfig.url}/contact` },

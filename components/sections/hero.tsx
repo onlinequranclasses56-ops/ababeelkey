@@ -69,7 +69,7 @@ export function Hero() {
               <Phone className="h-6 w-6 shrink-0" aria-hidden="true" />
               <span>
                 Call Now — 24/7
-                <span className="block text-sm font-semibold opacity-80">
+                <span className="block text-sm font-bold">
                   {siteConfig.phone}
                 </span>
               </span>

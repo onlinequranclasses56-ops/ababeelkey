@@ -5,7 +5,7 @@ import { BreadcrumbSchema, BreadcrumbNav } from "@/components/seo/breadcrumb-sch
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
-  title: "Locksmith Dubai FAQ — Common Questions Answered | +971 52 642 6161",
+  title: "Locksmith Dubai FAQ — Prices, Response Times & More",
   description:
     "Answers to common questions about locksmith services in Dubai — response times, pricing, car keys, home lockouts, and more. Call +971 52 642 6161 for immediate help.",
   alternates: { canonical: `${siteConfig.url}/faq` },

@@ -11,7 +11,7 @@ export function generateMetadata(): Metadata {
   const service = getService(SERVICE_SLUG);
   if (!service) return {};
   return {
-    title: `${service.name} Dubai — All Areas | Call ${siteConfig.phone}`,
+    title: `${service.name} Dubai — 24/7, All Areas`,
     description: `Professional ${service.name.toLowerCase()} across all Dubai areas. ${service.shortDescription} Available 24/7. Call ${siteConfig.phone} for a free quote.`,
     alternates: { canonical: `${siteConfig.url}/services/${SERVICE_SLUG}` },
   };

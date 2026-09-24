@@ -11,7 +11,7 @@ import { siteConfig } from "@/lib/config/site";
 import { services } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "24/7 Locksmith & Key Cutting Dubai | Call +971 52 642 6161 | Ababeel",
+  title: "24/7 Locksmith & Key Cutting Dubai",
   description:
     "24-hour locksmith in Dubai — emergency lockouts, car key programming, lock repair & key cutting. Based in Al Murar, Deira. Call +971 52 642 6161 now — we answer instantly.",
   alternates: {

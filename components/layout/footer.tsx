@@ -116,7 +116,7 @@ export function Footer() {
               <Phone className="h-4 w-4" aria-hidden="true" />
               <span>
                 Call Now — 24/7
-                <span className="block text-xs font-semibold opacity-80">{siteConfig.phone}</span>
+                <span className="block text-xs font-bold">{siteConfig.phone}</span>
               </span>
             </a>
 

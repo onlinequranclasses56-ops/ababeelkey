@@ -5,7 +5,7 @@ import { CtaBand } from "@/components/sections/cta-band";
 import { BreadcrumbSchema, BreadcrumbNav } from "@/components/seo/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "Dubai Locksmith Guides & Resources | Ababeel Key Trading",
+  title: "Dubai Locksmith Guides & Resources",
   description:
     "Free guides for Dubai residents — what to do in a lockout, when to replace vs repair locks, home security tips, car key advice, and locksmith cost guides. Call +971 52 642 6161 for immediate help.",
   alternates: { canonical: `${siteConfig.url}/guides` },
