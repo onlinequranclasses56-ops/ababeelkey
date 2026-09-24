@@ -20,14 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ── Static core pages ────────────────────────────────────────────────────
   const coreRoutes: MetadataRoute.Sitemap = [
     { url: BASE, lastModified: SITE_UPDATED, changeFrequency: "weekly", priority: 1.0 },
-    { url: `${BASE}/services`, lastModified: SITE_UPDATED, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE}/locations`, lastModified: SITE_UPDATED, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE}/blog`, lastModified: BLOG_PUBLISHED, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE}/about`, lastModified: SITE_UPDATED, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/services`, lastModified: SITE_UPDATED, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${BASE}/locations`, lastModified: SITE_UPDATED, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${BASE}/faq`, lastModified: SITE_UPDATED, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/guides`, lastModified: SITE_UPDATED, changeFrequency: "weekly", priority: 0.75 },
+    { url: `${BASE}/blog`, lastModified: BLOG_PUBLISHED, changeFrequency: "weekly", priority: 0.75 },
+    { url: `${BASE}/about`, lastModified: SITE_UPDATED, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/contact`, lastModified: SITE_UPDATED, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/faq`, lastModified: SITE_UPDATED, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE}/reviews`, lastModified: SITE_UPDATED, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE}/guides`, lastModified: SITE_UPDATED, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${BASE}/reviews`, lastModified: SITE_UPDATED, changeFrequency: "monthly", priority: 0.65 },
   ];
 
   // ── Blog posts ───────────────────────────────────────────────────────────
