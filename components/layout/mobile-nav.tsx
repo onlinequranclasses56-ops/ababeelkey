@@ -1,12 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { X, Menu } from "lucide-react";
+import { X, Menu, ChevronDown } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
+import { services } from "@/data/services";
+import { zones, getLocationsByZone } from "@/data/locations";
 
-const navLinks = [
-  { href: "/services", label: "Services" },
-  { href: "/locations", label: "Locations" },
+const flatLinks = [
   { href: "/blog", label: "Blog" },
   { href: "/guides", label: "Guides" },
   { href: "/faq", label: "FAQ" },
@@ -17,17 +17,21 @@ const navLinks = [
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
+  const [expanded, setExpanded] = React.useState<"services" | "locations" | null>(null);
 
   React.useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
   }, [open]);
+
+  function close() {
+    setOpen(false);
+    setExpanded(null);
+  }
+
+  function toggleSection(section: "services" | "locations") {
+    setExpanded((prev) => (prev === section ? null : section));
+  }
 
   return (
     <>
@@ -52,31 +56,128 @@ export function MobileNav() {
           {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/70 backdrop-blur-sm"
-            onClick={() => setOpen(false)}
+            onClick={close}
             aria-hidden="true"
           />
-          {/* Panel */}
-          <div className="absolute right-0 top-0 h-full w-72 bg-[var(--color-brand-surface)] border-l border-[var(--color-brand-border)] flex flex-col">
-            <div className="flex items-center justify-between p-5 border-b border-[var(--color-brand-border)]">
+
+          {/* Side panel */}
+          <div className="absolute right-0 top-0 h-full w-80 bg-[var(--color-brand-surface)] border-l border-[var(--color-brand-border)] flex flex-col">
+
+            {/* Panel header */}
+            <div className="flex items-center justify-between p-5 border-b border-[var(--color-brand-border)] shrink-0">
               <span className="font-bold text-[var(--color-brand-white)] text-sm">
                 Ababeel Key Trading
               </span>
               <button
-                onClick={() => setOpen(false)}
+                onClick={close}
                 className="h-8 w-8 flex items-center justify-center rounded-lg hover:bg-[var(--color-brand-steel)] text-[var(--color-brand-muted)] hover:text-[var(--color-brand-white)] transition-colors"
                 aria-label="Close menu"
               >
                 <X className="h-4 w-4" />
               </button>
             </div>
-            <nav className="flex-1 overflow-y-auto p-5">
+
+            {/* Scrollable nav */}
+            <nav className="flex-1 overflow-y-auto p-4">
               <ul className="flex flex-col gap-1">
-                {navLinks.map((link) => (
+
+                {/* ── Services accordion ── */}
+                <li>
+                  <button
+                    onClick={() => toggleSection("services")}
+                    aria-expanded={expanded === "services"}
+                    className="flex items-center justify-between w-full h-12 px-4 rounded-lg text-[var(--color-brand-body)] hover:text-[var(--color-brand-white)] hover:bg-[var(--color-brand-steel)] font-medium transition-colors text-sm"
+                  >
+                    <span>Services</span>
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform duration-200 ${expanded === "services" ? "rotate-180 text-[var(--color-brand-gold)]" : ""}`}
+                      aria-hidden="true"
+                    />
+                  </button>
+                  {expanded === "services" && (
+                    <div className="px-2 pb-2 pt-1">
+                      <div className="grid grid-cols-2 gap-1">
+                        {services.map((s) => (
+                          <a
+                            key={s.slug}
+                            href={`/services/${s.slug}`}
+                            onClick={close}
+                            className={`px-3 py-2 rounded-lg text-[11px] leading-snug transition-colors block ${
+                              s.urgency === "high"
+                                ? "text-[var(--color-brand-gold)] hover:bg-[var(--color-brand-steel)]"
+                                : "text-[var(--color-brand-muted)] hover:text-[var(--color-brand-white)] hover:bg-[var(--color-brand-steel)]"
+                            }`}
+                          >
+                            {s.name}
+                          </a>
+                        ))}
+                      </div>
+                      <a
+                        href="/services"
+                        onClick={close}
+                        className="mt-2 block text-center text-xs text-[var(--color-brand-gold)] hover:underline px-4 py-2"
+                      >
+                        All 20 services →
+                      </a>
+                    </div>
+                  )}
+                </li>
+
+                {/* ── Locations accordion ── */}
+                <li>
+                  <button
+                    onClick={() => toggleSection("locations")}
+                    aria-expanded={expanded === "locations"}
+                    className="flex items-center justify-between w-full h-12 px-4 rounded-lg text-[var(--color-brand-body)] hover:text-[var(--color-brand-white)] hover:bg-[var(--color-brand-steel)] font-medium transition-colors text-sm"
+                  >
+                    <span>Locations</span>
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform duration-200 ${expanded === "locations" ? "rotate-180 text-[var(--color-brand-gold)]" : ""}`}
+                      aria-hidden="true"
+                    />
+                  </button>
+                  {expanded === "locations" && (
+                    <div className="px-2 pb-2 pt-1 max-h-72 overflow-y-auto">
+                      {zones.map((zone) => {
+                        const zoneLocs = getLocationsByZone(zone);
+                        return (
+                          <div key={zone} className="mb-3">
+                            <p className="text-[10px] font-bold uppercase tracking-wide text-[var(--color-brand-gold)] px-3 py-1">
+                              {zone}
+                            </p>
+                            <div className="grid grid-cols-2 gap-0.5">
+                              {zoneLocs.map((loc) => (
+                                <a
+                                  key={loc.slug}
+                                  href={`/locations/${loc.slug}`}
+                                  onClick={close}
+                                  className="px-3 py-1.5 rounded text-[11px] text-[var(--color-brand-muted)] hover:text-[var(--color-brand-white)] hover:bg-[var(--color-brand-steel)] transition-colors"
+                                >
+                                  {loc.name}
+                                </a>
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      })}
+                      <a
+                        href="/locations"
+                        onClick={close}
+                        className="block text-center text-xs text-[var(--color-brand-gold)] hover:underline px-4 py-2"
+                      >
+                        All 42 Dubai areas →
+                      </a>
+                    </div>
+                  )}
+                </li>
+
+                {/* ── Flat links ── */}
+                {flatLinks.map((link) => (
                   <li key={link.href}>
                     <a
                       href={link.href}
-                      onClick={() => setOpen(false)}
-                      className="flex items-center h-12 px-4 rounded-lg text-[var(--color-brand-body)] hover:text-[var(--color-brand-white)] hover:bg-[var(--color-brand-steel)] font-medium transition-colors"
+                      onClick={close}
+                      className="flex items-center h-12 px-4 rounded-lg text-[var(--color-brand-body)] hover:text-[var(--color-brand-white)] hover:bg-[var(--color-brand-steel)] font-medium transition-colors text-sm"
                     >
                       {link.label}
                     </a>
@@ -84,11 +185,13 @@ export function MobileNav() {
                 ))}
               </ul>
             </nav>
-            <div className="p-5 border-t border-[var(--color-brand-border)] flex flex-col gap-3">
+
+            {/* Call CTA */}
+            <div className="p-5 border-t border-[var(--color-brand-border)] shrink-0">
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="flex items-center justify-center gap-2 h-12 rounded-xl gradient-gold text-[#0A0A0B] font-bold"
-                onClick={() => setOpen(false)}
+                className="flex items-center justify-center gap-2 h-12 rounded-xl gradient-gold text-[#0A0A0B] font-bold text-sm"
+                onClick={close}
               >
                 Call {siteConfig.phone}
               </a>

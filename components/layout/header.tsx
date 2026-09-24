@@ -2,17 +2,7 @@ import { Phone } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
 import { MobileNav } from "./mobile-nav";
 import { CallClickLink } from "./call-click-link";
-
-const navLinks = [
-  { href: "/services", label: "Services" },
-  { href: "/locations", label: "Locations" },
-  { href: "/blog", label: "Blog" },
-  { href: "/guides", label: "Guides" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/reviews", label: "Reviews" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
+import { DesktopNav } from "./desktop-nav";
 
 export function Header() {
   return (
@@ -22,7 +12,7 @@ export function Header() {
           {/* Logo / brand */}
           <a
             href="/"
-            className="flex flex-col leading-tight"
+            className="flex flex-col leading-tight shrink-0"
             aria-label="Ababeel Key Trading LLC – Home"
           >
             <span className="font-bold text-[var(--color-brand-white)] text-sm sm:text-base tracking-tight">
@@ -33,18 +23,8 @@ export function Header() {
             </span>
           </a>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="px-3 py-2 rounded-lg text-sm font-medium text-[var(--color-brand-body)] hover:text-[var(--color-brand-white)] hover:bg-[var(--color-brand-steel)] transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
+          {/* Desktop mega nav */}
+          <DesktopNav />
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
